@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @reclamation %>
+
+<div>
+  <%= link_to "Edit this reclamation", edit_reclamation_path(@reclamation) %> |
+  <%= link_to "Back to reclamations", reclamations_path %>
+
+  <%= button_to "Destroy this reclamation", @reclamation, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reclamations</h1>
+
+<div id="reclamations">
+  <% @reclamations.each do |reclamation| %>
+    <%= render reclamation %>
+    <p>
+      <%= link_to "Show this reclamation", reclamation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New reclamation", new_reclamation_path %>

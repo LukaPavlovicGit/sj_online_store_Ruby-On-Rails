@@ -1,0 +1,32 @@
+<%= form_with(model: reclamation) do |form| %>
+  <% if reclamation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reclamation.errors.count, "error") %> prohibited this reclamation from being saved:</h2>
+
+      <ul>
+        <% reclamation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :article_id, style: "display: block" %>
+    <%= form.number_field :article_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

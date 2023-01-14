@@ -1,0 +1,5 @@
+User.create(name: "Luka Pavlovic", email: "lpavlovic@raf.edu.rs", password: "admin", password_confirmation: "admin", role:"ADMIN")
+user = User.find_by(email: "lpavlovic@raf.edu.rs")
+user.password_digest
+user.authenticate("not_the_right_password")
+user.authenticate("admin")
